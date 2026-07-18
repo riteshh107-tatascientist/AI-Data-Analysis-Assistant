@@ -1,0 +1,509 @@
+order_date,region,category,sales_channel,units_sold,unit_price,discount_pct,customer_age,customer_rating,revenue
+2025-03-23,South,Books,In-Store,9,28.61,0.0,62,5.0,257.49
+2025-03-16,North,Clothing,Online,7,236.4,0.0,46,4.4,1654.8
+2025-03-21,North,Books,Online,7,64.21,20.0,37,3.9,359.58
+2024-08-29,North,Electronics,Online,14,203.43,15.0,34,3.5,2420.82
+2024-09-10,South,Clothing,Online,10,188.6,0.0,28,3.7,1886.0
+2024-01-09,South,Electronics,In-Store,10,84.04,15.0,49,3.4,714.34
+2024-06-08,South,Sports,In-Store,5,176.53,0.0,69,4.9,882.65
+2024-06-09,South,Home & Garden,Online,9,274.83,0.0,27,4.0,2473.47
+2024-05-13,East,Electronics,Online,9,11.4,10.0,44,4.3,92.34
+2024-04-15,East,Home & Garden,Online,8,52.06,0.0,55,3.2,416.48
+2024-11-18,West,Books,Online,10,39.42,20.0,51,,315.36
+2025-04-17,South,Home & Garden,In-Store,12,150.4,20.0,18,5.0,1443.84
+2025-02-13,East,Books,In-Store,9,158.9,20.0,30,4.3,1144.08
+2024-01-14,South,Books,Online,8,56.59,15.0,39,2.9,384.81
+2024-02-02,North,Clothing,Online,12,15.61,5.0,39,3.7,177.95
+2025-03-26,North,Electronics,In-Store,7,65.54,0.0,32,3.3,458.78
+2024-02-23,South,Sports,Online,10,208.88,20.0,54,4.5,1671.04
+2025-03-21,North,Books,Online,11,182.32,0.0,46,3.9,2005.52
+2024-08-24,East,Clothing,Online,5,136.11,0.0,32,5.0,680.55
+2024-09-17,North,Home & Garden,Online,6,150.52,20.0,20,3.6,722.5
+2024-10-12,South,Clothing,Online,4,204.47,5.0,49,3.0,776.99
+2025-01-13,West,Home & Garden,In-Store,5,153.44,5.0,69,2.9,728.84
+2024-07-19,West,Electronics,In-Store,10,276.03,15.0,18,3.8,2346.25
+2025-02-23,North,Books,In-Store,12,93.28,5.0,46,3.9,1063.39
+2024-11-11,East,Home & Garden,In-Store,4,298.11,10.0,61,3.7,1073.2
+2024-01-22,North,Books,Online,5,65.96,15.0,39,3.0,280.33
+2024-01-22,East,Home & Garden,Online,9,16.22,0.0,31,4.1,145.98
+2025-03-09,South,Books,Online,9,58.36,0.0,21,4.5,525.24
+2024-06-28,West,Books,In-Store,10,248.45,0.0,60,4.3,2484.5
+2024-12-25,North,Home & Garden,Online,11,248.55,0.0,31,3.8,2734.05
+2024-12-03,North,Electronics,Online,6,104.22,10.0,45,3.9,562.79
+2025-02-14,West,Home & Garden,Online,8,262.09,10.0,30,,1887.05
+2024-01-29,North,Electronics,Online,11,162.96,0.0,20,3.6,1792.56
+2024-05-26,East,Books,Online,10,101.2,0.0,30,4.4,1012.0
+2024-12-17,South,Home & Garden,Online,9,96.75,5.0,51,4.2,827.21
+2024-10-14,West,Home & Garden,Online,8,153.4,0.0,60,3.7,1227.2
+2025-02-01,North,Sports,Online,14,119.66,0.0,21,3.6,1675.24
+2024-04-16,East,Clothing,Online,11,27.6,0.0,19,3.0,303.6
+2024-06-09,North,Books,In-Store,3,24.41,0.0,69,3.3,73.23
+2024-08-10,North,Home & Garden,In-Store,10,138.44,0.0,68,,1384.4
+2024-05-27,North,Clothing,Online,6,42.06,10.0,25,4.2,227.12
+2024-11-21,South,Clothing,Online,7,239.9,0.0,33,5.0,1679.3
+2024-12-05,West,Clothing,Online,12,8.99,5.0,24,3.3,102.49
+2024-09-09,South,Sports,Online,5,180.13,0.0,32,4.6,900.65
+2025-05-03,East,Sports,Online,6,221.9,15.0,27,,1131.69
+2024-04-06,North,Clothing,Online,10,135.88,5.0,63,3.1,1290.86
+2024-10-19,North,Clothing,In-Store,12,54.91,20.0,45,5.0,527.14
+2024-05-07,South,Home & Garden,Online,11,198.52,10.0,55,3.6,1965.35
+2024-12-25,West,Books,Online,8,31.97,15.0,47,4.5,217.4
+2024-09-26,West,Books,Online,11,9.63,0.0,30,,105.93
+2024-04-25,West,Sports,Online,6,88.55,20.0,36,3.5,425.04
+2024-12-24,East,Clothing,Online,9,202.26,20.0,38,4.9,1456.27
+2024-03-12,East,Clothing,In-Store,8,200.89,0.0,33,3.4,1607.12
+2024-02-04,North,Home & Garden,Online,12,89.71,15.0,32,3.4,915.04
+2024-02-20,East,Clothing,Online,7,225.43,5.0,67,3.9,1499.11
+2024-09-30,West,Sports,In-Store,6,33.1,0.0,48,3.1,198.6
+2024-01-02,South,Clothing,In-Store,7,63.47,5.0,41,4.2,422.08
+2024-10-20,South,Electronics,In-Store,9,83.5,15.0,52,3.0,638.78
+2024-12-25,East,Sports,Online,12,247.17,20.0,58,4.5,2372.83
+2025-01-19,South,Books,Online,10,170.77,15.0,54,3.8,1451.54
+2025-04-04,West,Clothing,Online,7,89.6,0.0,68,4.1,627.2
+2024-12-25,North,Home & Garden,Online,8,196.62,5.0,25,4.5,1494.31
+2025-04-15,East,Electronics,Online,9,204.56,0.0,26,3.1,1841.04
+2025-04-29,South,Electronics,Online,11,191.48,0.0,37,4.4,2106.28
+2024-06-18,North,Clothing,In-Store,10,212.14,0.0,66,4.3,2121.4
+2025-02-01,West,Clothing,Online,17,61.22,0.0,48,4.2,1040.74
+2024-08-12,South,Sports,In-Store,8,62.37,0.0,37,4.3,498.96
+2025-04-20,South,Books,Online,11,119.24,0.0,59,4.3,1311.64
+2024-07-02,North,Home & Garden,In-Store,8,268.16,5.0,25,4.2,2038.02
+2024-06-20,South,Electronics,Online,4,8.11,10.0,31,4.6,29.2
+2025-04-22,East,Sports,In-Store,14,149.79,10.0,66,5.0,1887.35
+2024-02-18,West,Home & Garden,Online,4,152.41,5.0,38,3.9,579.16
+2024-09-20,East,Books,In-Store,8,163.44,10.0,25,3.4,1176.77
+2025-03-19,North,Books,In-Store,3,15.22,0.0,21,3.8,45.66
+2025-04-06,North,Electronics,In-Store,12,34.78,20.0,30,3.8,333.89
+2024-06-29,East,Home & Garden,Online,6,81.32,10.0,48,4.9,439.13
+2024-12-07,North,Books,Online,9,274.22,5.0,68,4.0,2344.58
+2025-01-19,South,Clothing,In-Store,19,275.2,0.0,38,4.1,5228.8
+2025-02-10,East,Sports,In-Store,5,220.12,,29,4.7,1100.6
+2024-08-05,West,Sports,Online,6,216.84,10.0,52,4.2,1170.94
+2024-10-27,West,Electronics,Online,3,209.29,0.0,31,4.3,627.87
+2024-02-22,North,Books,In-Store,8,5.37,0.0,36,3.5,42.96
+2024-06-27,East,Home & Garden,In-Store,14,138.56,0.0,42,4.4,1939.84
+2024-01-27,South,Clothing,Online,11,190.06,10.0,47,3.7,1881.59
+2024-04-08,North,Sports,In-Store,6,187.27,20.0,34,3.8,898.9
+2025-02-06,North,Clothing,In-Store,6,225.69,10.0,41,4.5,1218.73
+2024-02-04,South,Home & Garden,Online,9,277.96,0.0,52,2.6,2501.64
+2024-05-09,West,Home & Garden,Online,3,183.88,20.0,26,4.3,441.31
+2025-01-01,West,Home & Garden,Online,11,221.96,10.0,60,4.8,2197.4
+2025-05-06,South,Clothing,In-Store,9,9.52,0.0,41,3.2,85.68
+2024-12-03,West,Home & Garden,Online,5,124.71,0.0,45,4.0,623.55
+2024-06-08,North,Electronics,In-Store,6,36.04,5.0,30,3.0,205.43
+2024-06-22,East,Sports,In-Store,7,22.7,0.0,45,3.8,158.9
+2024-07-07,South,Books,In-Store,6,75.08,10.0,26,4.0,405.43
+2024-06-06,South,Electronics,Online,5,13.99,0.0,67,4.4,69.95
+2024-08-02,West,Sports,Online,7,275.54,0.0,30,3.9,1928.78
+2024-09-27,East,Sports,In-Store,10,220.65,15.0,19,5.0,1875.52
+2024-11-05,North,Electronics,Online,11,7.95,0.0,47,3.1,87.45
+2024-10-12,North,Sports,Online,6,112.05,0.0,36,4.1,672.3
+2024-07-08,North,Books,Online,12,5.64,10.0,55,3.2,60.91
+2024-08-25,South,Books,Online,9,262.86,0.0,66,3.5,2365.74
+2025-04-25,West,Books,In-Store,10,111.04,0.0,26,4.2,1110.4
+2025-04-20,East,Home & Garden,Online,11,182.84,15.0,28,5.0,1709.55
+2024-05-14,South,Electronics,In-Store,4,294.42,0.0,36,5.0,1177.68
+2025-02-25,East,Books,In-Store,8,219.26,5.0,29,4.0,1666.38
+2024-09-20,South,Electronics,Online,5,9.68,5.0,28,4.2,45.98
+2025-01-09,East,Home & Garden,Online,8,277.33,15.0,33,4.5,1885.84
+2024-03-02,North,Books,Online,7,152.59,5.0,32,5.0,1014.72
+2024-12-11,East,Electronics,Online,9,270.36,0.0,39,3.5,2433.24
+2025-04-28,South,Clothing,Online,5,76.11,20.0,28,3.9,304.44
+2024-10-21,West,Sports,Online,8,7.98,10.0,68,4.6,57.46
+2025-04-06,East,Clothing,Online,10,275.69,0.0,63,5.0,2756.9
+2024-02-07,South,Electronics,Online,14,31.81,15.0,60,3.7,378.54
+2024-08-27,West,Books,Online,10,170.62,0.0,19,3.4,1706.2
+2024-04-05,East,Home & Garden,Online,4,203.25,5.0,57,2.6,772.35
+2024-08-18,North,Sports,Online,12,233.65,5.0,51,4.3,2663.61
+2024-12-25,North,Home & Garden,Online,13,178.09,10.0,40,4.3,2083.65
+2024-05-31,West,Sports,Online,9,131.52,0.0,65,3.9,1183.68
+2024-02-28,South,Electronics,Online,10,251.96,0.0,52,4.5,2519.6
+2024-09-24,West,Home & Garden,Online,10,56.72,0.0,53,4.7,567.2
+2024-05-26,East,Home & Garden,Online,10,60.91,5.0,36,5.0,578.64
+2024-08-07,North,Books,Online,8,188.91,0.0,51,5.0,1511.28
+2024-06-18,East,Sports,Online,9,260.26,5.0,19,3.8,2225.22
+2024-10-30,East,Clothing,In-Store,8,299.84,0.0,41,4.1,2398.72
+2024-02-22,East,Clothing,In-Store,9,204.85,0.0,67,4.1,1843.65
+2024-04-12,North,Books,Online,8,59.41,0.0,64,3.7,475.28
+2024-07-16,North,Home & Garden,Online,11,284.59,0.0,49,4.7,3130.49
+2024-04-16,East,Clothing,Online,11,27.6,0.0,19,3.0,303.6
+2025-03-06,North,Clothing,Online,11,15.98,0.0,59,4.4,175.78
+2024-02-04,North,Home & Garden,In-Store,10,267.18,0.0,52,4.3,2671.8
+2024-07-08,East,Sports,Online,12,201.75,20.0,35,4.5,1936.8
+2025-04-14,South,Books,Online,6,46.45,10.0,33,4.2,250.83
+2025-04-21,East,Sports,Online,11,265.31,20.0,61,4.7,2334.73
+2024-07-09,South,Books,Online,7,265.02,20.0,60,5.0,1484.11
+2024-07-24,South,Clothing,Online,12,23.19,20.0,64,4.3,222.62
+2024-10-06,South,Clothing,In-Store,7,250.79,20.0,36,3.3,1404.42
+2025-01-26,South,Clothing,In-Store,8,57.05,5.0,34,4.3,433.58
+2025-04-21,West,Home & Garden,Online,3,169.89,0.0,52,4.2,509.67
+2024-12-24,South,Home & Garden,In-Store,12,141.3,15.0,42,4.7,1441.26
+2025-01-05,East,Electronics,Online,7,87.41,0.0,47,3.6,611.87
+2024-12-11,North,Clothing,Online,12,262.88,5.0,69,5.0,2996.83
+2024-05-18,West,Sports,Online,8,243.76,0.0,65,4.4,1950.08
+2025-03-31,North,Electronics,Online,7,32.29,0.0,26,4.7,226.03
+2024-04-25,East,Electronics,Online,8,111.2,10.0,43,,800.64
+2024-06-20,East,Books,Online,7,160.1,0.0,42,5.0,1120.7
+2024-05-16,West,Electronics,Online,7,75.06,10.0,45,4.4,472.88
+2024-11-05,North,Books,Online,15,38.15,15.0,54,3.2,486.41
+2024-12-14,South,Books,Online,5,288.26,15.0,43,5.0,1225.1
+2025-02-05,East,Electronics,Online,11,102.84,10.0,65,3.3,1018.12
+2024-07-06,East,Clothing,In-Store,12,278.37,0.0,19,3.4,3340.44
+2024-08-20,West,Clothing,Online,9,242.7,0.0,32,5.0,2184.3
+2024-12-09,North,Home & Garden,Online,10,74.14,5.0,45,3.5,704.33
+2025-04-03,South,Sports,Online,10,141.47,15.0,38,4.0,1202.5
+2024-06-15,North,Clothing,Online,6,228.18,20.0,25,4.5,1095.26
+2025-01-06,South,Electronics,In-Store,6,196.38,20.0,26,4.6,942.62
+2025-04-19,South,Electronics,In-Store,4,118.1,0.0,33,,472.4
+2024-02-06,North,Books,In-Store,11,183.16,0.0,27,3.3,2014.76
+2024-04-10,East,Books,Online,8,137.01,0.0,37,,1096.08
+2024-11-22,North,Clothing,Online,5,289.51,5.0,35,4.0,1375.17
+2025-03-21,West,Clothing,Online,6,207.08,20.0,58,,993.98
+2024-06-10,South,Home & Garden,Online,7,152.24,5.0,69,4.0,1012.4
+2025-03-28,East,Books,Online,7,90.01,10.0,32,4.2,567.06
+2024-08-12,South,Sports,Online,12,83.84,15.0,69,3.6,855.17
+2025-05-04,East,Clothing,In-Store,9,167.18,0.0,45,4.9,1504.62
+2024-03-15,North,Books,In-Store,7,256.33,0.0,56,4.6,1794.31
+2025-02-19,North,Clothing,In-Store,10,20.84,15.0,66,3.3,177.14
+2024-03-08,North,Clothing,In-Store,11,213.27,0.0,54,4.5,2345.97
+2024-06-09,South,Clothing,Online,9,284.72,0.0,35,3.7,2562.48
+2024-01-15,West,Sports,Online,11,267.18,0.0,50,5.0,2938.98
+2024-03-21,South,Clothing,In-Store,10,137.77,20.0,63,2.7,1102.16
+2024-02-06,East,Books,Online,7,224.36,20.0,49,4.4,1256.42
+2024-06-08,West,Clothing,In-Store,6,224.66,20.0,53,4.4,1078.37
+2025-01-20,East,Home & Garden,Online,15,221.75,0.0,58,2.8,3326.25
+2024-02-23,West,Sports,Online,10,113.97,0.0,57,,1139.7
+2024-06-01,North,Electronics,Online,9,164.32,0.0,58,4.6,1478.88
+2024-04-01,North,Books,In-Store,8,224.96,5.0,47,4.0,1709.7
+2025-01-14,North,Books,Online,8,202.91,5.0,50,3.9,1542.12
+2024-04-10,North,Sports,Online,11,119.65,0.0,69,1.8,1316.15
+2024-08-03,South,Books,Online,10,127.47,20.0,35,3.5,1019.76
+2024-12-11,East,Electronics,In-Store,5,218.81,0.0,34,4.2,1094.05
+2024-04-17,East,Books,Online,14,171.85,5.0,66,4.8,2285.6
+2024-09-16,North,Home & Garden,Online,11,266.24,0.0,64,5.0,2928.64
+2024-10-30,South,Home & Garden,In-Store,12,267.94,5.0,26,4.2,3054.52
+2024-08-09,North,Clothing,Online,9,242.14,0.0,33,3.9,2179.26
+2025-01-18,East,Sports,Online,11,190.81,10.0,65,4.2,1889.02
+2024-02-10,North,Clothing,Online,11,237.74,0.0,30,4.8,2615.14
+2024-11-13,East,Home & Garden,In-Store,8,293.78,0.0,44,4.1,2350.24
+2024-04-22,West,Home & Garden,Online,11,286.73,0.0,58,3.8,3154.03
+2024-01-21,East,Books,Online,7,223.41,0.0,25,3.9,1563.87
+2024-08-04,East,Books,In-Store,8,82.49,20.0,30,5.0,527.94
+2024-11-26,South,Books,In-Store,7,177.11,0.0,48,4.3,1239.77
+2025-04-17,South,Electronics,In-Store,8,227.36,0.0,48,3.7,1818.88
+2025-01-21,West,Electronics,Online,7,233.88,10.0,27,3.0,1473.44
+2024-05-31,North,Electronics,In-Store,7,294.66,20.0,27,3.7,1650.1
+2024-01-21,North,Home & Garden,Online,8,149.34,0.0,45,2.7,1194.72
+2024-01-06,East,Sports,Online,9,293.88,15.0,23,4.1,2248.18
+2024-02-02,East,Home & Garden,Online,11,68.58,5.0,50,4.9,716.66
+2024-05-08,North,Sports,Online,6,35.36,20.0,21,4.3,169.73
+2024-02-11,South,Clothing,Online,9,282.56,0.0,37,3.2,2543.04
+2024-07-26,South,Books,Online,9,217.76,20.0,34,4.6,1567.87
+2024-10-28,West,Sports,Online,10,91.91,10.0,45,5.0,827.19
+2024-06-09,South,Clothing,In-Store,10,61.03,0.0,54,4.7,610.3
+2024-03-06,West,Home & Garden,Online,7,203.26,15.0,27,3.7,1209.4
+2024-01-17,West,Home & Garden,In-Store,10,23.1,10.0,48,4.1,207.9
+2024-05-30,East,Home & Garden,Online,8,221.75,0.0,49,3.9,1774.0
+2025-01-14,West,Electronics,Online,8,203.23,15.0,38,3.5,1381.96
+2025-01-24,South,Home & Garden,Online,8,87.41,10.0,61,,629.35
+2024-09-08,North,Electronics,In-Store,9,11.96,15.0,33,4.8,91.49
+2024-11-22,East,Sports,In-Store,6,35.93,15.0,32,3.5,183.24
+2025-05-07,North,Home & Garden,Online,12,98.09,0.0,39,5.0,1177.08
+2024-05-10,North,Electronics,In-Store,6,203.57,0.0,55,2.6,1221.42
+2024-05-30,South,Home & Garden,Online,8,262.77,20.0,36,5.0,1681.73
+2024-12-17,West,Clothing,In-Store,12,288.68,15.0,26,5.0,2944.54
+2024-03-28,East,Books,Online,11,246.4,0.0,49,4.3,2710.4
+2024-07-26,North,Books,In-Store,12,150.26,20.0,67,4.4,1442.5
+2024-11-02,West,Home & Garden,Online,10,129.35,15.0,34,4.6,1099.47
+2025-01-14,West,Electronics,In-Store,14,147.69,5.0,27,,1964.28
+2024-03-03,North,Clothing,Online,10,124.89,0.0,64,3.6,1248.9
+2024-10-22,East,Electronics,In-Store,9,193.41,5.0,59,3.8,1653.66
+2024-12-29,West,Sports,In-Store,10,188.06,10.0,66,4.5,1692.54
+2024-02-29,North,Clothing,Online,19,79.46,0.0,19,3.9,1509.74
+2024-07-31,North,Electronics,Online,8,46.67,5.0,30,4.5,354.69
+2024-05-01,West,Electronics,Online,11,218.22,0.0,52,2.7,2400.42
+2024-05-10,South,Books,Online,8,60.75,15.0,19,4.5,413.1
+2024-04-09,East,Books,Online,6,59.15,0.0,25,4.6,354.9
+2024-04-22,North,Clothing,In-Store,11,255.3,5.0,29,4.1,2667.88
+2024-04-12,North,Books,Online,8,59.41,0.0,64,3.7,475.28
+2025-03-18,East,Electronics,Online,8,170.09,0.0,43,3.9,1360.72
+2024-09-27,West,Sports,Online,9,80.76,15.0,29,4.3,617.81
+2024-09-23,North,Sports,Online,6,220.39,0.0,31,4.4,1322.34
+2025-04-28,North,Home & Garden,Online,10,86.7,5.0,38,4.4,823.65
+2024-02-27,East,Books,In-Store,8,192.86,0.0,49,4.6,1542.88
+2024-04-29,North,Electronics,Online,6,265.54,10.0,46,4.3,1433.92
+2024-08-18,North,Home & Garden,Online,12,98.35,0.0,29,4.1,1180.2
+2024-06-06,East,Electronics,Online,6,291.31,0.0,49,4.6,1747.86
+2024-02-22,North,Clothing,Online,8,154.08,0.0,31,4.1,1232.64
+2025-03-18,North,Clothing,Online,8,127.05,,31,2.4,965.58
+2025-01-08,West,Sports,Online,7,201.12,20.0,26,4.1,1126.27
+2024-08-11,North,Books,Online,6,153.54,0.0,42,5.0,921.24
+2024-02-18,North,Clothing,In-Store,6,37.47,0.0,34,4.4,224.82
+2024-02-10,West,Books,Online,13,118.21,5.0,33,3.2,1459.89
+2025-03-14,East,Books,Online,6,208.6,20.0,34,5.0,1001.28
+2024-04-08,East,Clothing,Online,11,210.43,0.0,62,4.2,2314.73
+2024-04-08,South,Clothing,Online,12,60.32,10.0,40,5.0,651.46
+2025-04-19,North,Books,In-Store,11,268.1,0.0,62,4.8,2949.1
+2025-03-15,West,Clothing,In-Store,14,276.29,0.0,62,4.0,3868.06
+2024-01-13,North,Sports,In-Store,5,94.37,20.0,31,3.8,377.48
+2025-03-31,West,Sports,Online,6,206.37,15.0,26,4.0,1052.49
+2025-04-05,East,Sports,Online,12,201.01,0.0,25,,2412.12
+2024-08-13,South,Home & Garden,In-Store,11,144.15,20.0,56,5.0,1268.52
+2025-04-13,South,Books,In-Store,9,184.32,0.0,23,4.6,1658.88
+2024-10-15,North,Electronics,In-Store,5,109.7,10.0,25,4.2,493.65
+2024-04-06,North,Electronics,In-Store,10,272.79,0.0,39,3.3,2727.9
+2025-03-13,North,Electronics,Online,10,66.78,0.0,43,4.2,667.8
+2025-03-20,North,Home & Garden,Online,3,251.84,0.0,60,2.9,755.52
+2024-10-24,East,Electronics,In-Store,6,27.28,0.0,43,4.2,163.68
+2024-01-09,East,Home & Garden,Online,5,32.93,5.0,44,4.6,156.42
+2024-10-03,South,Sports,Online,7,135.89,5.0,64,4.4,903.67
+2024-11-20,West,Electronics,Online,16,130.9,0.0,40,3.7,2094.4
+2024-08-12,East,Home & Garden,Online,9,22.73,10.0,29,3.7,184.11
+2025-02-23,East,Home & Garden,Online,14,284.25,0.0,57,3.3,3979.5
+2024-09-13,West,Books,In-Store,13,297.27,0.0,63,4.1,3864.51
+2025-02-04,West,Clothing,Online,6,295.1,15.0,57,5.0,1505.01
+2024-05-19,South,Home & Garden,In-Store,5,132.14,20.0,39,4.8,528.56
+2025-04-17,East,Electronics,In-Store,7,219.88,0.0,54,3.3,1539.16
+2024-12-30,North,Sports,Online,8,191.01,,24,3.3,1528.08
+2024-12-13,South,Home & Garden,Online,7,147.74,5.0,64,4.2,982.47
+2025-03-21,South,Sports,Online,3,119.91,15.0,21,3.3,305.77
+2024-10-15,West,Electronics,Online,9,75.27,10.0,29,5.0,609.69
+2024-08-31,East,Electronics,In-Store,11,211.32,15.0,57,4.7,1975.84
+2024-05-07,West,Books,In-Store,10,267.15,0.0,52,4.4,2671.5
+2024-07-06,West,Clothing,Online,8,168.42,5.0,32,3.9,1279.99
+2024-07-07,South,Books,In-Store,6,75.08,10.0,26,4.0,405.43
+2024-11-23,North,Sports,In-Store,8,128.75,15.0,60,5.0,875.5
+2024-08-21,West,Clothing,Online,9,32.85,10.0,55,3.3,266.09
+2024-03-21,North,Electronics,Online,9,96.8,0.0,61,3.3,871.2
+2024-02-17,East,Sports,Online,10,70.22,10.0,47,3.1,631.98
+2024-04-22,East,Home & Garden,In-Store,7,136.8,0.0,53,3.7,957.6
+2025-04-08,South,Sports,In-Store,10,38.97,5.0,20,,370.22
+2024-02-23,West,Books,Online,10,54.98,20.0,26,5.0,439.84
+2024-07-26,South,Books,Online,9,276.59,0.0,56,4.6,2489.31
+2024-05-27,East,Clothing,In-Store,9,159.2,0.0,61,4.9,1432.8
+2024-03-26,West,Clothing,Online,3,211.01,15.0,35,5.0,538.08
+2024-08-02,North,Sports,Online,11,63.71,0.0,65,4.5,700.81
+2025-03-24,East,Sports,In-Store,6,101.69,15.0,24,,518.62
+2025-03-06,South,Clothing,In-Store,11,220.33,0.0,37,4.8,2423.63
+2025-02-19,South,Books,Online,10,123.99,10.0,69,,1115.91
+2024-02-19,East,Clothing,Online,6,172.12,5.0,69,4.1,981.08
+2024-04-12,West,Clothing,In-Store,9,89.4,10.0,30,2.3,724.14
+2025-04-04,North,Clothing,In-Store,7,150.6,20.0,64,3.9,843.36
+2024-07-20,East,Clothing,Online,13,37.49,0.0,37,5.0,487.37
+2024-10-10,North,Home & Garden,Online,11,220.28,15.0,59,4.2,2059.62
+2024-07-13,West,Books,Online,7,184.27,0.0,62,3.4,1289.89
+2024-02-13,East,Electronics,Online,10,153.65,10.0,22,3.2,1382.85
+2024-07-10,North,Home & Garden,Online,12,99.85,0.0,27,5.0,1198.2
+2025-02-06,East,Electronics,In-Store,8,186.56,5.0,42,4.5,1417.86
+2025-02-07,North,Sports,In-Store,13,207.13,5.0,61,4.3,2558.06
+2024-05-10,North,Books,Online,12,255.59,15.0,35,3.0,2607.02
+2024-09-12,North,Books,Online,5,246.53,15.0,37,3.1,1047.75
+2024-03-12,East,Clothing,In-Store,8,200.89,0.0,33,3.4,1607.12
+2024-05-14,West,Home & Garden,In-Store,5,289.07,0.0,40,4.7,1445.35
+2024-06-23,South,Books,Online,9,264.65,0.0,64,3.4,2381.85
+2024-05-07,North,Home & Garden,Online,12,253.13,20.0,61,4.5,2430.05
+2025-02-11,North,Electronics,In-Store,9,148.59,0.0,64,4.2,1337.31
+2024-11-09,South,Clothing,In-Store,11,138.8,5.0,28,4.2,1450.46
+2024-09-09,North,Sports,In-Store,16,219.95,0.0,55,3.9,3519.2
+2025-01-22,East,Electronics,Online,6,13.1,0.0,20,3.7,78.6
+2024-07-10,South,Electronics,Online,14,261.05,5.0,50,5.0,3471.96
+2025-01-29,East,Electronics,Online,10,135.67,0.0,50,4.4,1356.7
+2025-01-11,East,Electronics,Online,5,97.8,0.0,20,4.5,489.0
+2025-03-06,East,Electronics,Online,13,200.32,0.0,29,3.5,2604.16
+2024-09-27,South,Sports,In-Store,8,178.5,0.0,46,2.7,1428.0
+2024-09-11,East,Books,Online,5,297.59,0.0,58,3.4,1487.95
+2024-08-05,North,Home & Garden,Online,11,144.53,10.0,28,3.5,1430.85
+2024-10-10,East,Clothing,Online,12,191.2,0.0,44,4.3,2294.4
+2024-12-05,North,Sports,Online,11,137.48,0.0,61,4.6,1512.28
+2024-09-03,East,Sports,In-Store,11,36.34,0.0,31,3.0,399.74
+2024-11-04,North,Home & Garden,Online,7,83.92,20.0,49,3.0,469.95
+2024-06-13,East,Books,Online,9,118.98,0.0,68,4.7,1070.82
+2024-07-16,East,Home & Garden,In-Store,6,191.96,5.0,67,4.3,1094.17
+2025-02-10,East,Electronics,Online,11,23.42,0.0,62,5.0,257.62
+2025-04-16,East,Home & Garden,In-Store,8,111.67,0.0,30,3.8,893.36
+2025-05-06,South,Sports,In-Store,8,41.45,5.0,54,4.7,315.02
+2024-01-15,West,Books,Online,8,105.58,10.0,19,4.3,760.18
+2024-02-05,West,Home & Garden,In-Store,12,30.12,15.0,55,4.5,307.22
+2024-05-08,West,Home & Garden,Online,9,171.89,10.0,34,4.7,1392.31
+2024-07-21,North,Sports,Online,9,195.45,20.0,42,4.3,1407.24
+2025-01-01,West,Home & Garden,In-Store,9,185.22,0.0,41,4.2,1666.98
+2024-10-10,South,Books,In-Store,12,91.67,0.0,20,,1100.04
+2024-02-15,North,Electronics,Online,7,104.24,0.0,32,4.4,729.68
+2024-10-09,North,Home & Garden,Online,8,222.48,0.0,23,5.0,1779.84
+2024-04-08,South,Sports,Online,11,152.26,10.0,69,4.1,1507.37
+2024-07-08,North,Clothing,Online,12,105.94,20.0,47,4.1,1017.02
+2025-03-16,South,Sports,Online,9,212.44,5.0,18,4.2,1816.36
+2025-04-29,North,Electronics,Online,8,162.19,0.0,47,3.7,1297.52
+2024-01-18,South,Clothing,In-Store,8,105.64,0.0,43,3.0,845.12
+2024-10-07,West,Home & Garden,Online,6,225.52,15.0,35,4.1,1150.15
+2024-05-10,South,Books,Online,8,72.97,0.0,48,5.0,583.76
+2024-10-30,North,Electronics,Online,12,23.43,10.0,18,4.8,253.04
+2024-10-09,South,Sports,Online,7,271.39,20.0,69,4.4,1519.78
+2024-02-13,East,Books,In-Store,4,154.79,0.0,38,3.9,619.16
+2024-08-24,West,Home & Garden,In-Store,5,32.62,15.0,45,3.3,138.64
+2024-01-02,West,Books,Online,11,272.28,0.0,35,4.4,2995.08
+2024-10-06,North,Electronics,In-Store,12,268.73,0.0,66,,3224.76
+2024-04-22,West,Electronics,In-Store,12,110.2,,66,4.4,1190.16
+2024-08-14,East,Books,Online,6,39.1,0.0,32,4.4,234.6
+2024-10-03,North,Clothing,Online,11,288.14,10.0,40,4.0,2852.59
+2024-11-15,South,Home & Garden,Online,5,38.04,0.0,59,5.0,190.2
+2024-01-05,East,Sports,Online,7,265.43,10.0,61,2.7,1672.21
+2024-12-11,North,Books,Online,2,66.44,20.0,64,3.7,106.3
+2024-02-21,North,Clothing,Online,8,184.0,0.0,22,3.7,1472.0
+2025-04-29,North,Home & Garden,Online,14,155.12,0.0,65,4.2,2171.68
+2025-01-19,South,Home & Garden,Online,8,47.48,15.0,62,3.4,322.86
+2025-04-25,South,Books,In-Store,10,5.47,0.0,31,4.6,54.7
+2025-01-27,West,Sports,Online,5,20.0,0.0,41,3.4,100.0
+2025-01-26,South,Books,In-Store,5,159.67,0.0,45,3.4,798.35
+2024-05-23,North,Books,Online,8,286.55,10.0,49,3.5,2063.16
+2024-12-16,South,Electronics,Online,6,111.23,0.0,26,3.9,667.38
+2024-01-28,South,Electronics,Online,13,53.27,5.0,28,3.3,657.88
+2024-12-10,South,Home & Garden,Online,11,279.84,20.0,37,4.5,2462.59
+2024-09-08,West,Electronics,Online,5,116.71,5.0,40,4.3,554.37
+2024-02-08,North,Clothing,Online,16,45.5,0.0,25,4.5,728.0
+2024-07-12,East,Clothing,Online,10,291.28,10.0,47,4.3,2621.52
+2024-11-24,East,Books,In-Store,9,39.81,10.0,45,4.2,322.46
+2024-07-09,North,Books,In-Store,6,173.65,20.0,65,5.0,833.52
+2024-08-28,South,Electronics,In-Store,12,188.47,20.0,40,4.6,1809.31
+2025-05-13,South,Electronics,In-Store,4,116.89,0.0,33,4.1,467.56
+2025-05-04,South,Books,In-Store,9,6.17,5.0,29,3.6,52.75
+2024-05-22,West,Books,Online,13,46.78,0.0,18,4.5,608.14
+2024-05-14,East,Home & Garden,Online,4,51.95,0.0,33,4.9,207.8
+2024-05-07,North,Home & Garden,Online,9,266.8,15.0,66,3.7,2041.02
+2025-01-18,North,Books,In-Store,5,47.84,0.0,59,4.0,239.2
+2025-04-11,West,Books,In-Store,9,283.87,10.0,58,3.9,2299.35
+2025-01-20,West,Home & Garden,Online,3,48.9,,58,3.8,146.7
+2024-08-05,West,Electronics,In-Store,13,218.3,0.0,44,4.0,2837.9
+2024-08-30,North,Books,Online,10,297.82,0.0,58,4.1,2978.2
+2024-08-20,South,Books,Online,7,130.76,0.0,40,4.4,915.32
+2024-11-02,North,Home & Garden,Online,11,144.04,15.0,42,3.4,1346.77
+2024-05-02,North,Home & Garden,In-Store,5,221.2,0.0,22,3.9,1106.0
+2024-09-10,South,Clothing,Online,8,239.95,10.0,27,4.5,1727.64
+2025-01-03,North,Sports,In-Store,15,198.76,0.0,36,3.3,2981.4
+2024-08-23,East,Clothing,In-Store,10,160.78,0.0,29,,1607.8
+2024-06-20,West,Sports,In-Store,9,215.8,,69,4.8,1942.2
+2024-05-29,South,Clothing,Online,8,88.13,0.0,55,4.0,705.04
+2024-11-12,East,Electronics,Online,10,73.62,15.0,24,4.3,625.77
+2024-07-17,West,Books,Online,11,266.35,5.0,19,3.2,2783.36
+2025-03-19,East,Electronics,In-Store,6,201.37,,29,3.7,1147.81
+2024-08-18,East,Electronics,Online,8,118.26,10.0,69,3.9,851.47
+2025-03-03,North,Sports,Online,13,277.34,0.0,49,3.8,3605.42
+2024-11-13,South,Clothing,Online,6,127.17,5.0,63,4.9,724.87
+2025-03-11,South,Home & Garden,In-Store,13,151.77,,30,4.9,1973.01
+2024-08-18,West,Electronics,Online,11,152.84,15.0,37,3.7,1429.05
+2025-03-28,North,Electronics,Online,15,258.22,20.0,48,3.3,3098.64
+2024-12-14,West,Electronics,Online,6,86.4,15.0,42,3.7,440.64
+2024-02-24,West,Clothing,Online,11,193.31,10.0,48,5.0,1913.77
+2024-04-22,West,Electronics,Online,8,261.12,0.0,61,3.6,2088.96
+2024-05-31,North,Books,Online,7,127.26,0.0,18,3.9,890.82
+2024-08-20,North,Electronics,Online,10,76.0,0.0,50,4.1,760.0
+2025-04-16,South,Home & Garden,Online,12,192.45,0.0,62,4.0,2309.4
+2024-11-03,South,Clothing,Online,13,233.6,15.0,44,3.7,2581.28
+2024-08-20,West,Home & Garden,Online,10,14.69,0.0,26,5.0,146.9
+2024-09-15,South,Clothing,In-Store,8,199.8,10.0,64,3.5,1438.56
+2024-07-25,West,Books,Online,12,259.75,5.0,36,3.7,2961.15
+2024-01-28,East,Home & Garden,Online,10,291.76,0.0,31,3.6,2917.6
+2024-04-23,South,Home & Garden,Online,5,278.05,0.0,30,4.7,1390.25
+2025-02-04,South,Electronics,In-Store,9,154.96,0.0,22,3.2,1394.64
+2024-03-03,South,Sports,Online,10,251.48,0.0,63,5.0,2514.8
+2025-01-01,West,Clothing,In-Store,10,298.71,,38,4.2,2987.1
+2025-02-18,North,Clothing,In-Store,10,79.38,20.0,50,4.0,635.04
+2024-07-16,North,Clothing,In-Store,11,98.05,0.0,33,4.1,1078.55
+2024-11-18,South,Electronics,Online,6,292.56,15.0,23,4.2,1492.06
+2024-01-02,East,Home & Garden,Online,7,140.69,0.0,44,3.7,984.83
+2025-04-05,South,Clothing,In-Store,9,27.63,0.0,19,3.6,248.67
+2024-06-11,West,Books,In-Store,7,286.99,10.0,49,3.6,1808.04
+2025-04-14,North,Clothing,Online,9,107.92,15.0,50,2.8,825.59
+2024-02-21,North,Home & Garden,Online,6,299.8,10.0,41,4.6,1618.92
+2024-05-05,South,Home & Garden,Online,6,61.84,20.0,28,3.5,296.83
+2024-05-15,East,Clothing,Online,12,235.27,0.0,47,3.2,2823.24
+2024-08-01,South,Home & Garden,Online,11,169.27,0.0,50,3.3,1861.97
+2025-02-23,East,Home & Garden,In-Store,11,65.39,0.0,28,4.6,719.29
+2024-01-04,South,Clothing,Online,5,70.03,10.0,20,3.4,315.14
+2024-06-24,East,Electronics,In-Store,5,199.23,0.0,41,4.9,996.15
+2024-09-24,South,Clothing,Online,11,120.25,0.0,66,4.1,1322.75
+2024-04-21,West,Electronics,Online,11,213.84,0.0,32,3.4,2352.24
+2024-04-25,South,Sports,Online,7,212.19,0.0,55,4.0,1485.33
+2024-05-09,East,Electronics,Online,7,164.77,0.0,47,3.8,1153.39
+2024-06-05,East,Clothing,Online,11,206.13,5.0,26,4.3,2154.06
+2024-04-05,South,Home & Garden,In-Store,3,255.59,15.0,42,3.7,651.75
+2025-03-17,North,Sports,Online,8,84.13,5.0,50,5.0,639.39
+2024-12-14,North,Home & Garden,In-Store,8,98.6,20.0,36,4.4,631.04
+2024-10-30,West,Electronics,Online,8,31.5,20.0,21,3.4,201.6
+2024-07-19,South,Electronics,In-Store,9,109.48,15.0,66,4.9,837.52
+2024-12-08,East,Electronics,Online,12,241.24,0.0,54,4.3,2894.88
+2024-04-21,East,Electronics,Online,11,196.74,20.0,32,3.8,1731.31
+2024-11-26,West,Clothing,Online,9,255.34,15.0,32,4.7,1953.35
+2024-06-08,North,Clothing,In-Store,11,19.63,15.0,58,3.7,183.54
+2025-02-17,South,Sports,Online,10,41.49,5.0,58,4.3,394.16
+2025-01-22,North,Electronics,In-Store,6,164.66,0.0,25,5.0,987.96
+2024-03-29,East,Electronics,In-Store,15,124.07,15.0,20,4.8,1581.89
+2025-01-07,East,Books,In-Store,9,206.58,20.0,51,3.8,1487.38
+2024-11-19,East,Home & Garden,Online,7,56.23,20.0,18,4.3,314.89
+2024-05-26,South,Books,Online,5,182.18,0.0,45,3.4,910.9
+2024-09-08,North,Sports,Online,10,299.96,20.0,43,3.1,2399.68
+2025-02-27,North,Clothing,Online,12,84.48,0.0,40,4.5,1013.76
+2024-04-07,South,Sports,In-Store,7,219.54,0.0,47,3.8,1536.78
+2024-10-20,North,Clothing,Online,10,177.07,10.0,18,4.0,1593.63
+2025-03-30,South,Home & Garden,Online,9,150.58,15.0,54,5.0,1151.94
+2024-07-06,West,Sports,In-Store,7,219.62,5.0,58,5.0,1460.47
+2024-08-07,North,Electronics,Online,8,190.68,20.0,61,3.7,1220.35
+2024-09-27,East,Sports,In-Store,10,220.65,15.0,19,5.0,1875.52
+2024-10-06,North,Home & Garden,Online,9,226.33,0.0,69,4.5,2036.97
+2025-03-21,North,Clothing,Online,8,62.52,0.0,31,3.8,500.16
+2024-06-17,North,Sports,Online,5,53.28,0.0,32,4.1,266.4
+2024-04-13,South,Clothing,In-Store,6,69.81,,31,4.1,418.86
+2024-10-06,East,Electronics,In-Store,11,115.99,20.0,41,4.4,1020.71
+2024-10-03,West,Sports,Online,4,42.53,10.0,52,4.5,153.11
+2024-09-08,West,Home & Garden,In-Store,13,231.35,0.0,45,4.1,3007.55
+2024-08-17,North,Home & Garden,Online,8,257.13,0.0,35,4.2,2057.04
+2024-12-03,North,Home & Garden,Online,11,286.74,20.0,36,4.6,2523.31
+2024-04-08,South,Clothing,In-Store,11,89.14,15.0,51,4.4,833.46
+2024-03-02,West,Clothing,Online,12,10.23,0.0,64,4.8,122.76
+2025-05-11,South,Sports,Online,10,210.87,10.0,21,,1897.83
+2024-07-05,West,Books,Online,9,216.77,0.0,64,4.8,1950.93
+2024-05-03,South,Sports,In-Store,8,134.91,10.0,43,4.1,971.35
+2025-03-31,East,Electronics,Online,10,82.11,15.0,23,3.4,697.94
+2025-03-11,South,Home & Garden,In-Store,13,151.77,,30,4.9,1973.01
+2024-05-23,West,Electronics,Online,9,255.47,0.0,31,4.8,2299.23
+2024-09-14,East,Home & Garden,Online,8,158.17,15.0,57,4.7,1075.56
+2024-07-05,North,Home & Garden,In-Store,8,166.89,20.0,42,4.6,1068.1
+2025-04-08,West,Electronics,Online,8,177.0,0.0,32,4.6,1416.0
+2024-01-21,North,Home & Garden,Online,8,149.34,0.0,45,2.7,1194.72
+2024-12-14,West,Electronics,Online,6,86.4,15.0,42,3.7,440.64
+2024-03-21,West,Sports,Online,11,18.93,10.0,19,4.9,187.41
+2025-01-22,South,Electronics,Online,10,94.27,20.0,21,4.2,754.16
+2024-09-19,West,Books,Online,16,201.43,5.0,56,3.7,3061.74
+2024-09-15,West,Sports,Online,12,135.49,10.0,40,3.2,1463.29
+2024-04-04,South,Books,Online,12,12.64,15.0,38,4.0,128.93
+2024-02-14,East,Books,Online,15,114.66,0.0,56,4.9,1719.9
+2024-09-21,South,Books,In-Store,7,56.15,0.0,53,3.9,393.05
+2024-02-20,North,Electronics,Online,7,97.48,0.0,51,3.5,682.36
+2024-12-31,South,Sports,Online,10,111.14,0.0,56,4.3,1111.4
+2025-02-07,West,Sports,In-Store,8,126.34,15.0,56,4.8,859.11
+2025-02-21,East,Home & Garden,In-Store,8,201.42,15.0,68,4.3,1369.66
+2024-06-20,North,Books,Online,8,42.08,10.0,53,4.5,302.98
+2024-12-14,South,Electronics,In-Store,8,226.14,0.0,27,4.1,1809.12
+2025-05-11,North,Clothing,Online,3,147.7,5.0,50,3.2,420.94
+2024-06-11,North,Books,Online,6,84.21,15.0,20,5.0,429.47
+2025-05-14,East,Books,Online,11,215.53,20.0,30,5.0,1896.66
+2025-04-07,South,Home & Garden,In-Store,6,229.92,0.0,35,3.2,1379.52
+2024-07-05,South,Clothing,Online,7,66.67,0.0,28,3.7,466.69
+2024-09-11,North,Clothing,Online,7,158.31,0.0,46,2.7,1108.17
+2024-02-23,East,Electronics,Online,11,80.79,10.0,65,4.7,799.82
+2024-08-14,East,Books,In-Store,10,166.38,0.0,37,5.0,1663.8
+2024-04-30,West,Books,Online,6,213.79,20.0,56,4.7,1026.19
+2025-01-20,North,Sports,In-Store,10,205.59,5.0,68,3.7,1953.1
+2025-01-07,North,Clothing,In-Store,5,158.11,0.0,49,3.9,790.55
+2024-03-05,South,Clothing,Online,16,76.84,0.0,65,3.7,1229.44
+2025-02-22,South,Electronics,Online,12,25.77,20.0,60,2.8,247.39
+2024-10-30,East,Sports,Online,12,39.07,0.0,26,3.5,468.84
+2025-02-20,North,Home & Garden,Online,5,240.21,5.0,52,4.9,1141.0
+2024-12-09,West,Books,Online,10,158.46,0.0,50,4.6,1584.6
+2024-06-19,South,Electronics,Online,10,35.24,0.0,39,4.4,352.4
+2024-04-08,North,Books,Online,7,188.49,20.0,24,3.4,1055.54
+2024-11-10,West,Home & Garden,In-Store,10,270.59,15.0,68,4.3,2300.01
+2024-12-05,North,Electronics,In-Store,5,64.85,15.0,26,4.8,275.61
+2025-02-05,East,Electronics,Online,7,219.63,10.0,27,2.8,1383.67
+2024-10-09,North,Books,Online,14,29.89,15.0,26,3.9,355.69
+2024-12-10,North,Books,Online,5,64.61,0.0,62,4.4,323.05
