@@ -602,8 +602,8 @@ elif page == "🎯 ML Predictions":
                 fi.columns = ["feature", "importance"]
                 import plotly.express as px
                 fig = px.bar(fi.head(15), x="importance", y="feature", orientation="h",
-                             template="plotly_dark", color="importance",
-                             color_continuous_scale=["#3a2f1c", "#8a6414", "#ffb000"])
+                             template="plotly_dark")
+                fig.update_traces(marker_color="#ffb000")
                 fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
                                    font=dict(color="#ede6d6", family="IBM Plex Mono, monospace"))
                 st.plotly_chart(fig, width='stretch')

@@ -60,7 +60,8 @@ def make_chart(df: pd.DataFrame, chart_type: str, x=None, y=None, color=None, ti
 
     if chart_type == "bar":
         agg = df.groupby(x, dropna=False)[y].mean(numeric_only=True).reset_index().sort_values(y, ascending=False).head(20)
-        fig = px.bar(agg, x=x, y=y, title=title, template=TEMPLATE, color=y, color_continuous_scale=CONTINUOUS_SCALE)
+        fig = px.bar(agg, x=x, y=y, title=title, template=TEMPLATE)
+        fig.update_traces(marker_color=COLOR_SEQUENCE[0])
 
     elif chart_type == "line":
         d = df.sort_values(x)
