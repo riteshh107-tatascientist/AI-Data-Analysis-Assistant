@@ -52,8 +52,8 @@ def get_active_df():
 # SIDEBAR NAVIGATION
 # ----------------------------------------------------------------------------
 with st.sidebar:
-    st.markdown("## AI_DATA_ANALYST // PRO")
-    st.caption("upload → clean → analyze → predict → report")
+    st.markdown("## 📊 AI Data Analyst Pro")
+    st.caption("Upload → Clean → Analyze → Predict → Report")
     st.divider()
 
     page = st.radio(
@@ -74,13 +74,13 @@ with st.sidebar:
 
     st.divider()
     if st.session_state.df is not None:
-        st.success(f"loaded: {st.session_state.filename}")
+        st.success(f"✅ Loaded: {st.session_state.filename}")
         st.caption(f"{st.session_state.df.shape[0]} rows × {st.session_state.df.shape[1]} cols")
     else:
-        st.info("no dataset loaded")
+        st.info("No dataset loaded yet.")
 
     provider, _ = ai_engine.get_available_provider(st.secrets if hasattr(st, "secrets") else {})
-    st.caption(f"ai_provider: {provider or 'offline'}")
+    st.caption(f"AI provider: **{provider or 'offline mode (no key configured)'}**")
 
 # ============================================================================
 # PAGE: HOME
@@ -90,52 +90,55 @@ if page == "🏠 Home":
 
     c1, c2, c3 = st.columns(3)
     with c1:
-        st.markdown(utils.feature_card("A1", "🧹", "Automatic Cleaning",
+        st.markdown(utils.feature_card("🧹", "Automatic Cleaning",
                      "Detect and fix missing values, duplicates, and outliers in one click."),
                      unsafe_allow_html=True)
     with c2:
-        st.markdown(utils.feature_card("B1", "📊", "Interactive Visuals",
+        st.markdown(utils.feature_card("📊", "Interactive Visuals",
                      "AI-recommended, fully interactive Plotly charts tailored to your data."),
                      unsafe_allow_html=True)
     with c3:
-        st.markdown(utils.feature_card("C1", "🤖", "AI-Powered Insights",
+        st.markdown(utils.feature_card("🤖", "AI-Powered Insights",
                      "Ask questions and get business insights grounded strictly in your data."),
                      unsafe_allow_html=True)
 
     st.write("")
     c4, c5, c6 = st.columns(3)
     with c4:
-        st.markdown(utils.feature_card("A2", "🎯", "ML Predictions",
+        st.markdown(utils.feature_card("🎯", "ML Predictions",
                      "Train classification or regression models automatically — no code needed."),
                      unsafe_allow_html=True)
     with c5:
-        st.markdown(utils.feature_card("B2", "📄", "PDF Reports",
+        st.markdown(utils.feature_card("📄", "PDF Reports",
                      "Export a polished, professional report with charts, stats, and insights."),
                      unsafe_allow_html=True)
     with c6:
-        st.markdown(utils.feature_card("C2", "🔒", "Private & Secure",
+        st.markdown(utils.feature_card("🔒", "Private & Secure",
                      "Your data is processed only in your session — never stored permanently."),
                      unsafe_allow_html=True)
 
     st.write("")
-    utils.section_header("Pipeline")
+    utils.section_header("How It Works")
     steps = st.columns(5)
-    labels = ["Upload", "Clean", "Explore", "Predict", "Report"]
+    labels = ["1. Upload", "2. Clean", "3. Explore", "4. Predict", "5. Report"]
     icons = ["📁", "🧹", "📈", "🎯", "📄"]
-    for i, (col, label, icon) in enumerate(zip(steps, labels, icons), start=1):
+    for col, label, icon in zip(steps, labels, icons):
         with col:
-            st.markdown(utils.pipeline_step(f"0{i}", icon, label), unsafe_allow_html=True)
+            st.markdown(f"<div style='text-align:center; font-size:2rem;'>{icon}</div>"
+                        f"<div style='text-align:center; color:#94a3b8;'>{label}</div>",
+                        unsafe_allow_html=True)
 
     st.write("")
-    utils.section_header("Supported Formats")
-    st.markdown(f"{utils.ext_tag('csv')} {utils.ext_tag('xlsx')} {utils.ext_tag('json')}",
+    utils.section_header("Supported File Formats")
+    st.markdown(f"{utils.badge('CSV')} &nbsp; {utils.badge('XLSX')} &nbsp; {utils.badge('JSON')}",
                 unsafe_allow_html=True)
 
     st.write("")
     st.info("🔐 **Security:** Files are processed in-memory during your session only. "
             "API keys are stored securely via Streamlit secrets and are never exposed to the client.")
 
-    if st.button("Run First Analysis →"):
+    if st.button("🚀 Get Started — Upload Your Data"):
+        st.switch_page  # no-op placeholder for older streamlit versions
         st.info("Go to **📁 Upload Data** in the sidebar to begin.")
 
     utils.app_footer()
@@ -545,9 +548,8 @@ elif page == "🎯 ML Predictions":
                 import plotly.express as px
                 fig = px.bar(fi.head(15), x="importance", y="feature", orientation="h",
                              template="plotly_dark", color="importance",
-                             color_continuous_scale=["#3a2f1c", "#8a6414", "#ffb000"])
-                fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
-                                   font=dict(color="#ede6d6", family="IBM Plex Mono, monospace"))
+                             color_continuous_scale="Tealgrn")
+                fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
                 st.plotly_chart(fig, use_container_width=True)
 
             st.write("")
