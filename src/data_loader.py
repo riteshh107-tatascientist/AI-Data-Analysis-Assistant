@@ -16,6 +16,71 @@ class DataLoadError(Exception):
     pass
 
 
+def _read_csv_with_delimiter_detection(uploaded_file) -> pd.DataFrame:
+    """
+    Read a CSV robustly: try to sniff the delimiter (comma, semicolon, tab, pipe)
+    instead of blindly assuming comma. Falls back through encodings too.
+    This prevents the common 'entire file loaded into 1 column' bug when a CSV
+    uses ';' (common in European exports) or tab/pipe separators.
+    """
+    import csv
+
+    candidate_encodings = ["utf-8", "latin1"]
+    candidate_delimiters = [",", ";", "\t", "|"]
+
+    last_error = None
+
+    for encoding in candidate_encodings:
+        uploaded_file.seek(0)
+        try:
+            raw_bytes = uploaded_file.read()
+            text_sample = raw_bytes[:8192].decode(encoding, errors="strict")
+        except (UnicodeDecodeError, Exception) as e:
+            last_error = e
+            continue
+
+        # Try to sniff the delimiter from a sample of the file
+        detected_delimiter = None
+        try:
+            dialect = csv.Sniffer().sniff(text_sample, delimiters=",;\t|")
+            detected_delimiter = dialect.delimiter
+        except csv.Error:
+            detected_delimiter = None
+
+        delimiters_to_try = [detected_delimiter] if detected_delimiter else []
+        delimiters_to_try += [d for d in candidate_delimiters if d != detected_delimiter]
+
+        best_df = None
+        best_col_count = 1
+
+        for delim in delimiters_to_try:
+            try:
+                from io import BytesIO
+                trial_df = pd.read_csv(BytesIO(raw_bytes), sep=delim, encoding=encoding, engine="python")
+                if trial_df.shape[1] > best_col_count:
+                    best_col_count = trial_df.shape[1]
+                    best_df = trial_df
+                    # Good enough — a real multi-column parse found
+                    if best_col_count > 1:
+                        break
+            except Exception as e:
+                last_error = e
+                continue
+
+        if best_df is not None:
+            return best_df
+
+        # As a last resort for this encoding, do a plain default read
+        try:
+            from io import BytesIO
+            return pd.read_csv(BytesIO(raw_bytes), encoding=encoding)
+        except Exception as e:
+            last_error = e
+            continue
+
+    raise DataLoadError(f"Could not parse CSV file with any known delimiter/encoding: {last_error}")
+
+
 def validate_file(uploaded_file) -> None:
     """Validate file extension and size before attempting to parse it."""
     if uploaded_file is None:
@@ -47,12 +112,7 @@ def load_dataset(uploaded_file) -> pd.DataFrame:
 
     try:
         if ext == "csv":
-            # Try multiple encodings gracefully
-            try:
-                df = pd.read_csv(uploaded_file)
-            except UnicodeDecodeError:
-                uploaded_file.seek(0)
-                df = pd.read_csv(uploaded_file, encoding="latin1")
+            df = _read_csv_with_delimiter_detection(uploaded_file)
 
         elif ext in ("xlsx", "xls"):
             df = pd.read_excel(uploaded_file)

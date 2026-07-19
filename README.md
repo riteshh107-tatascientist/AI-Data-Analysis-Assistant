@@ -100,8 +100,9 @@ The AI Insights and Chatbot pages support three providers — configure **any on
 | OpenAI | `OPENAI_API_KEY` | `gpt-4o-mini` |
 | Google Gemini | `GEMINI_API_KEY` | `gemini-1.5-flash` |
 
-If you choose OpenAI or Gemini, also add `openai` or `google-generativeai` to `requirements.txt`
-(they're left out by default to keep the base install lightweight since Anthropic is the default provider).
+`google-generativeai` (Gemini) is already included in `requirements.txt`, so **Gemini works out of the box**
+with just a `GEMINI_API_KEY` — no extra setup needed. If you choose OpenAI instead, add `openai` to
+`requirements.txt` (left out by default since it's not one of the two defaults).
 
 All AI responses are grounded in an aggregated statistical summary of your dataset — never raw
 row-level data — and the system prompt explicitly forbids inventing numbers or trends not present
