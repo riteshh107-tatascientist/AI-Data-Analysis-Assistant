@@ -25,6 +25,20 @@ st.set_page_config(
 
 utils.inject_custom_css()
 
+
+def get_secrets_safe() -> dict:
+    """
+    Safely read st.secrets without crashing when no secrets.toml is configured.
+    Streamlit raises StreamlitSecretNotFoundError the moment secrets are accessed
+    (not just when a missing key is looked up) if no secrets file/section exists
+    anywhere — this must never take down the whole app, since running with zero
+    configured API keys ("offline mode") is a fully supported, documented state.
+    """
+    try:
+        return dict(st.secrets)
+    except Exception:
+        return {}
+
 # ----------------------------------------------------------------------------
 # SESSION STATE INITIALIZATION
 # ----------------------------------------------------------------------------
@@ -52,8 +66,8 @@ def get_active_df():
 # SIDEBAR NAVIGATION
 # ----------------------------------------------------------------------------
 with st.sidebar:
-    st.markdown("## 📊 AI Data Analyst Pro")
-    st.caption("Upload → Clean → Analyze → Predict → Report")
+    st.markdown("## AI_DATA_ANALYST // PRO")
+    st.caption("upload → clean → analyze → predict → report")
     st.divider()
 
     page = st.radio(
@@ -74,13 +88,13 @@ with st.sidebar:
 
     st.divider()
     if st.session_state.df is not None:
-        st.success(f"✅ Loaded: {st.session_state.filename}")
+        st.success(f"loaded: {st.session_state.filename}")
         st.caption(f"{st.session_state.df.shape[0]} rows × {st.session_state.df.shape[1]} cols")
     else:
-        st.info("No dataset loaded yet.")
+        st.info("no dataset loaded")
 
-    provider, _ = ai_engine.get_available_provider(st.secrets if hasattr(st, "secrets") else {})
-    st.caption(f"AI provider: **{provider or 'offline mode (no key configured)'}**")
+    provider, _ = ai_engine.get_available_provider(get_secrets_safe())
+    st.caption(f"ai_provider: {provider or 'offline'}")
 
 # ============================================================================
 # PAGE: HOME
@@ -88,58 +102,99 @@ with st.sidebar:
 if page == "🏠 Home":
     utils.hero_section()
 
+    # ---------------- LIVE PREVIEW: real charts from the bundled dataset ----------------
+    @st.cache_data
+    def _home_preview():
+        raw_df = data_loader.load_sample_dataset()
+        raw_dupes = int(raw_df.duplicated().sum())
+        preview_df = cleaner.auto_clean(raw_df)
+        preview_quality = cleaner.get_quality_report(preview_df)
+        preview_profile = analyzer.profile_dataset(preview_df)
+        return preview_df, preview_quality, preview_profile, raw_dupes
+
+    prev_df, prev_quality, prev_profile, raw_dupes = _home_preview()
+
+    st.markdown(
+        '<div class="section-header">Live Preview — sample_dataset.csv</div>',
+        unsafe_allow_html=True,
+    )
+    p1, p2, p3, p4 = st.columns(4)
+    p1.metric("Rows", f"{prev_profile['n_rows']:,}")
+    p2.metric("Columns", prev_profile["n_columns"])
+    p3.metric("Quality Score", f"{prev_quality['score']}/100")
+    p4.metric("Duplicates Removed", raw_dupes)
+
+    pc1, pc2 = st.columns(2)
+    with pc1:
+        fig = visualizer.make_chart(
+            prev_df, "bar", x="category", y="revenue", title="Revenue by Category"
+        )
+        st.plotly_chart(fig, width='stretch', key="home_preview_bar")
+    with pc2:
+        fig2 = visualizer.make_chart(prev_df, "heatmap", title="Correlation Heatmap")
+        st.plotly_chart(fig2, width='stretch', key="home_preview_heatmap")
+
+    st.caption("This is real output from this app, generated on page load — not a mockup. "
+               "Upload your own file to replace it, or explore this dataset directly.")
+
+    cta1, cta2 = st.columns([1, 3])
+    with cta1:
+        if st.button("Load this dataset →"):
+            st.session_state.df = prev_df
+            st.session_state.df_cleaned = None
+            st.session_state.filename = "sample_dataset.csv"
+            st.session_state.ml_result = None
+            st.session_state.ai_insights_cache = None
+            st.success("Loaded — open any page in the sidebar to continue.")
+
+    st.write("")
+
     c1, c2, c3 = st.columns(3)
     with c1:
-        st.markdown(utils.feature_card("🧹", "Automatic Cleaning",
+        st.markdown(utils.feature_card("A1", "🧹", "Automatic Cleaning",
                      "Detect and fix missing values, duplicates, and outliers in one click."),
                      unsafe_allow_html=True)
     with c2:
-        st.markdown(utils.feature_card("📊", "Interactive Visuals",
+        st.markdown(utils.feature_card("B1", "📊", "Interactive Visuals",
                      "AI-recommended, fully interactive Plotly charts tailored to your data."),
                      unsafe_allow_html=True)
     with c3:
-        st.markdown(utils.feature_card("🤖", "AI-Powered Insights",
+        st.markdown(utils.feature_card("C1", "🤖", "AI-Powered Insights",
                      "Ask questions and get business insights grounded strictly in your data."),
                      unsafe_allow_html=True)
 
     st.write("")
     c4, c5, c6 = st.columns(3)
     with c4:
-        st.markdown(utils.feature_card("🎯", "ML Predictions",
+        st.markdown(utils.feature_card("A2", "🎯", "ML Predictions",
                      "Train classification or regression models automatically — no code needed."),
                      unsafe_allow_html=True)
     with c5:
-        st.markdown(utils.feature_card("📄", "PDF Reports",
+        st.markdown(utils.feature_card("B2", "📄", "PDF Reports",
                      "Export a polished, professional report with charts, stats, and insights."),
                      unsafe_allow_html=True)
     with c6:
-        st.markdown(utils.feature_card("🔒", "Private & Secure",
+        st.markdown(utils.feature_card("C2", "🔒", "Private & Secure",
                      "Your data is processed only in your session — never stored permanently."),
                      unsafe_allow_html=True)
 
     st.write("")
-    utils.section_header("How It Works")
+    utils.section_header("Pipeline")
     steps = st.columns(5)
-    labels = ["1. Upload", "2. Clean", "3. Explore", "4. Predict", "5. Report"]
+    labels = ["Upload", "Clean", "Explore", "Predict", "Report"]
     icons = ["📁", "🧹", "📈", "🎯", "📄"]
-    for col, label, icon in zip(steps, labels, icons):
+    for i, (col, label, icon) in enumerate(zip(steps, labels, icons), start=1):
         with col:
-            st.markdown(f"<div style='text-align:center; font-size:2rem;'>{icon}</div>"
-                        f"<div style='text-align:center; color:#94a3b8;'>{label}</div>",
-                        unsafe_allow_html=True)
+            st.markdown(utils.pipeline_step(f"0{i}", icon, label), unsafe_allow_html=True)
 
     st.write("")
-    utils.section_header("Supported File Formats")
-    st.markdown(f"{utils.badge('CSV')} &nbsp; {utils.badge('XLSX')} &nbsp; {utils.badge('JSON')}",
+    utils.section_header("Supported Formats")
+    st.markdown(f"{utils.ext_tag('csv')} {utils.ext_tag('xlsx')} {utils.ext_tag('json')}",
                 unsafe_allow_html=True)
 
     st.write("")
     st.info("🔐 **Security:** Files are processed in-memory during your session only. "
             "API keys are stored securely via Streamlit secrets and are never exposed to the client.")
-
-    if st.button("🚀 Get Started — Upload Your Data"):
-        st.switch_page  # no-op placeholder for older streamlit versions
-        st.info("Go to **📁 Upload Data** in the sidebar to begin.")
 
     utils.app_footer()
 
@@ -204,11 +259,11 @@ elif page == "📁 Upload Data":
 
         st.write("")
         utils.section_header("Dataset Preview")
-        st.dataframe(df.head(50), use_container_width=True)
+        st.dataframe(df.head(50), width='stretch')
 
         with st.expander("📋 Column Data Types"):
             dtype_df = pd.DataFrame({"Column": df.columns, "Data Type": df.dtypes.astype(str).values})
-            st.dataframe(dtype_df, use_container_width=True, hide_index=True)
+            st.dataframe(dtype_df, width='stretch', hide_index=True)
     else:
         st.info("👆 Upload a CSV, Excel, or JSON file to get started — or load the example dataset.")
 
@@ -304,7 +359,7 @@ elif page == "🧹 Data Cleaning":
         st.write("")
         utils.section_header("Cleaned Dataset Preview")
         active_df = get_active_df()
-        st.dataframe(active_df.head(50), use_container_width=True)
+        st.dataframe(active_df.head(50), width='stretch')
 
         csv_bytes = data_loader.df_to_csv_bytes(active_df)
         st.download_button("⬇️ Download Cleaned Dataset (CSV)", csv_bytes,
@@ -334,14 +389,14 @@ elif page == "📈 EDA & Statistics":
         if stats_df.empty:
             st.info("No numeric columns found.")
         else:
-            st.dataframe(stats_df, use_container_width=True)
+            st.dataframe(stats_df, width='stretch')
 
         utils.section_header("Categorical Summary")
         cat_df = analyzer.categorical_summary(df)
         if cat_df.empty:
             st.info("No categorical columns found.")
         else:
-            st.dataframe(cat_df, use_container_width=True)
+            st.dataframe(cat_df, width='stretch')
 
         utils.section_header("Correlation Matrix")
         corr = analyzer.correlation_matrix(df)
@@ -349,7 +404,7 @@ elif page == "📈 EDA & Statistics":
             st.info("Not enough numeric columns for correlation analysis.")
         else:
             fig = visualizer.make_chart(df, "heatmap", title="Correlation Heatmap")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
 
             top_corr = analyzer.top_correlations(df, 5)
             if top_corr:
@@ -379,7 +434,7 @@ elif page == "📊 Visualizations":
                         df, rec["type"],
                         x=rec.get("x"), y=rec.get("y"), title=rec["title"]
                     )
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(fig, width='stretch')
                 except Exception as e:
                     st.error(f"Could not render chart: {e}")
 
@@ -401,7 +456,7 @@ elif page == "📊 Visualizations":
                     y=None if y_col == "(none)" else y_col,
                     title=f"Custom {chart_type} chart",
                 )
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig, width='stretch')
             except Exception as e:
                 st.error(f"Could not render chart: {e}")
 
@@ -425,7 +480,7 @@ elif page == "🤖 AI Insights":
 
         st.divider()
         st.write("**🧠 Deep AI-generated business insights:**")
-        secrets = dict(st.secrets) if hasattr(st, "secrets") else {}
+        secrets = get_secrets_safe()
         provider, _ = ai_engine.get_available_provider(secrets)
         if provider is None:
             st.info("No AI API key configured — add one to `.streamlit/secrets.toml` for narrative "
@@ -450,7 +505,7 @@ elif page == "💬 AI Chatbot":
         st.warning("⚠️ Please upload a dataset first.")
     else:
         df = get_active_df()
-        secrets = dict(st.secrets) if hasattr(st, "secrets") else {}
+        secrets = get_secrets_safe()
 
         st.caption("Ask questions like: \"What are the important trends?\", \"Explain this dataset\", "
                     "\"Which features affect sales?\", \"Give business recommendations.\"")
@@ -548,9 +603,10 @@ elif page == "🎯 ML Predictions":
                 import plotly.express as px
                 fig = px.bar(fi.head(15), x="importance", y="feature", orientation="h",
                              template="plotly_dark", color="importance",
-                             color_continuous_scale="Tealgrn")
-                fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
-                st.plotly_chart(fig, use_container_width=True)
+                             color_continuous_scale=["#3a2f1c", "#8a6414", "#ffb000"])
+                fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
+                                   font=dict(color="#ede6d6", family="IBM Plex Mono, monospace"))
+                st.plotly_chart(fig, width='stretch')
 
             st.write("")
             st.write("**🔮 Sample Predictions vs Actual**")
@@ -558,7 +614,7 @@ elif page == "🎯 ML Predictions":
                 "Actual": result["y_test"].values[:15],
                 "Predicted": result["y_pred"][:15],
             })
-            st.dataframe(comparison, use_container_width=True)
+            st.dataframe(comparison, width='stretch')
 
 # ============================================================================
 # PAGE: PDF REPORT
@@ -584,7 +640,7 @@ elif page == "📄 PDF Report":
                 if include_ai:
                     ai_text = st.session_state.ai_insights_cache
                     if not ai_text:
-                        secrets = dict(st.secrets) if hasattr(st, "secrets") else {}
+                        secrets = get_secrets_safe()
                         context = analyzer.build_ai_context_summary(df)
                         ai_text = ai_engine.generate_ai_insights(secrets, context)
                 else:
